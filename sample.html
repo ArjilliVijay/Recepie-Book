@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation to Content</title>
+    <style>
+        /* Basic styling for sections */
+        section {
+            padding: 50px;
+            margin: 50px 0;
+            border: 1px solid #ccc;
+        }
+        /* Navbar styling */
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a onclick="scrollToSection('home')">Home</a></li>
+            <li><a onclick="scrollToSection('about')">About</a></li>
+            <li><a onclick="scrollToSection('services')">Services</a></li>
+            <li><a onclick="scrollToSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to the home section.</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>This is the about section.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Our services are listed here.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch through this section.</p>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
